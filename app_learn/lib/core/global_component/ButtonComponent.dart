@@ -1,22 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ButtonComponent extends StatelessWidget {
-  final String text;
-  final VoidCallback onPressed;
-
-  const ButtonComponent({super.key, required this.text, required this.onPressed});
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: const Color(0xFF8978f4), // Warna ungu gelap
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12), // Button dengan radius
-        ),
+ElevatedButton(
+  style: ButtonStyle(
+    backgroundColor: WidgetStateProperty.all<Color>(Colors.purple.shade900),
+    shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12.0),
       ),
-      onPressed: onPressed,
-      child: Text(text, style: const TextStyle(color: Colors.white)),
-    );
-  }
-}
+    ),
+  ),
+  onPressed: () {},
+  child: Text('Get Started', style: TextStyle(color: Colors.white)),
+);

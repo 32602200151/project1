@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'widgets/welcome_illustration_widget.dart';
-import 'widgets/get_started_button_widget.dart';
-import 'welcome_controller.dart';
+import '../widget/GetStartedButtonWidget.dart';
+import '../widget/WelcomeIllustrationWidget.dart';
+import '../controller/WelcomeController.dart';
 
 class WelcomeScreen extends StatelessWidget {
   final WelcomeController welcomeController = WelcomeController();

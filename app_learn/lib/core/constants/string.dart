@@ -17,3 +17,5 @@ const String favorites = 'Favorites';
 const String search = 'Search';
 const String settings = 'Settings';
 const String nextQuestion = 'Next Question';
+const String myapp = 'My App'
+
