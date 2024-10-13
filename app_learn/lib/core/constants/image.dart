@@ -1,0 +1,9 @@
+const String welcomeImage = 'assets/images/welcomescreen.jpeg';
+const String designImage = 'assets/images/desain.png';
+const String programmingImage = 'assets/images/programming.png';
+const String businessImage = 'assets/images/businessandFinance.png';
+const String pythonImage = 'assets/images/python.png';
+const String htmlImage = 'assets/images/html.png';
+const String cppImage = 'assets/images/cplus.png';
+const String cssImage = 'assets/images/css.png';
+const String avatarImage = 'assets/images/avatar.png';
