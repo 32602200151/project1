@@ -1,8 +1,7 @@
-// lib/core/features/onboarding/widgets/GetStartedButtonWidget.dart
 import 'package:flutter/material.dart';
 
 class GetStartedButtonWidget extends StatelessWidget {
-  final VoidCallback onPressed; // Menentukan parameter untuk callback
+  final VoidCallback onPressed;
 
   const GetStartedButtonWidget({super.key, required this.onPressed});
 
@@ -11,9 +10,9 @@ class GetStartedButtonWidget extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: const Color(0xFF8978F4), // Warna ungu gelap
+        backgroundColor: const Color(0xFF8978F4),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.0), // Radius tombol
+          borderRadius: BorderRadius.circular(30.0),
         ),
       ),
       child: const Row(
@@ -24,7 +23,7 @@ class GetStartedButtonWidget extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
           SizedBox(width: 8),
-          Icon(Icons.arrow_forward, color: Colors.white), // Ikon anak panah
+          Icon(Icons.arrow_forward, color: Colors.white),
         ],
       ),
     );

@@ -1,10 +1,9 @@
-// lib/core/features/onboarding/controller/WelcomeController.dart
 import 'package:get/get.dart';
-import '../../course_display/screen/HomeScreen.dart'; // Pastikan jalur ini benar
+import '../../course_display/screen/HomeScreen.dart';
 
 class WelcomeController extends GetxController {
-  // Metode untuk navigasi ke HomeScreen
+  // Method to navigate to HomeScreen
   void navigateToHome() {
-    Get.to(() => const HomeScreen()); // Navigasi ke HomeScreen
+    Get.to(() => const HomeScreen(courses: [])); // Navigate to HomeScreen
   }
 }
