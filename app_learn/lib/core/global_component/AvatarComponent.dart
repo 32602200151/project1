@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class AvatarComponent extends StatelessWidget {
   final String imageUrl;
-  
-  const AvatarComponent({super.key, required this.imageUrl});
+
+  const AvatarComponent({required this.imageUrl, super.key});
 
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.topRight,
+      alignment: Alignment.centerRight, // Avatar di sebelah kanan
       child: CircleAvatar(
-        radius: MediaQuery.of(context).size.width * 0.1, // Sesuaikan ukuran layar
-        backgroundImage: NetworkImage(imageUrl), // Gambar avatar
+        backgroundImage: NetworkImage(imageUrl),
+        radius: MediaQuery.of(context).size.width * 0.1, // Ukuran menyesuaikan layar
       ),
     );
   }

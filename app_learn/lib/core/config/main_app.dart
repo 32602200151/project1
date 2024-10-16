@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
-import '../utils/route_utils.dart'; // Pastikan path ini benar
+import '../features/onboarding/screen/WelcomeScreen.dart'; // Pastikan path ini benar
+import '../features/course_display/screen/HomeScreen.dart'; // Pastikan path ini benar
+import '../utils/route_utils.dart';
+
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});  // Tambahkan 'const'
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'App Learn',
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
-      initialRoute: '/',
-      routes: RouteUtils.getRoutes(),  // Gunakan RouteUtils untuk memuat semua route
+      initialRoute: RouteUtils.welcomeScreen,
+      routes: {
+        RouteUtils.welcomeScreen: (context) => WelcomeScreen(),
+        RouteUtils.homeScreen: (context) => const HomeScreen(), // Pastikan HomeScreen terdefinisi
+      },
     );
   }
 }

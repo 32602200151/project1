@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app_learn",
+    "\\app_learn\\lib",
+    "\\app_learn\\lib\\core",
+    "\\app_learn\\lib\\core\\constants",
+    "\\app_learn\\lib\\data"
+  ],
+  "SelectedNode": "\\app_learn\\lib\\core\\constants\\color.dart",
+  "PreviewInSolutionExplorer": false
+}

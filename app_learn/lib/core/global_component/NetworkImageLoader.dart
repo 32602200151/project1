@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class NetworkImageLoader extends StatelessWidget {
   final String imageUrl;
 
-  const NetworkImageLoader({super.key, required this.imageUrl});
+  const NetworkImageLoader({required this.imageUrl, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class NetworkImageLoader extends StatelessWidget {
           ),
         );
       },
-      cacheWidth: 400, // Optimalisasi ukuran gambar
+      fit: BoxFit.cover, // Agar gambar teroptimasi
     );
   }
 }

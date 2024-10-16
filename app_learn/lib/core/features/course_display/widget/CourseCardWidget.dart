@@ -1,28 +1,21 @@
+// lib/core/features/course_display/widgets/CourseCardWidget.dart
 import 'package:flutter/material.dart';
+import '../../../../data/course/model_responses/CourseResponse.dart';
 
 class CourseCardWidget extends StatelessWidget {
-  final String title;
-  final String subtitle;
+  final CourseResponse courseResponse; // Parameter yang sesuai
 
-  CourseCardWidget({required this.title, required this.subtitle});
+  // Perhatikan bahwa parameter namanya 'courseResponse'
+  const CourseCardWidget({super.key, required this.courseResponse});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12), // Tepi melengkung
-      ),
-      color: Color(0xFF8978f4), // Latar belakang ungu
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(title, style: TextStyle(color: Colors.white, fontSize: 18)),
-            SizedBox(height: 8),
-            Text(subtitle, style: TextStyle(color: Colors.white70, fontSize: 14)),
-          ],
-        ),
+      child: Column(
+        children: [
+          Text(courseResponse.title), // Menggunakan courseResponse
+          Text('Total Courses: ${courseResponse.courseCount}'), // Menggunakan courseResponse
+        ],
       ),
     );
   }

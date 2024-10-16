@@ -1,25 +1,48 @@
 import 'package:flutter/material.dart';
 
 class WelcomeIllustrationWidget extends StatelessWidget {
-  const WelcomeIllustrationWidget({super.key});
+  final String title;
+  final String description;
+  final String imageUrl; // Added imageUrl parameter
+
+  const WelcomeIllustrationWidget({
+    Key? key,
+    required this.title,
+    required this.description,
+    required this.imageUrl, // Include imageUrl in constructor
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset('assets/images/welcomescreen.jpeg', height: 200),
-        const SizedBox(height: 20),
-        const Text(
-          "Immersion in the world of knowledge",
-          style: TextStyle(color: Colors.white, fontSize: 24),
-          textAlign: TextAlign.center,
+        // Display the illustration
+        Image.asset(
+          imageUrl,
+          height: 500, // Adjust the height as needed
+          width: 500, // Adjust the width as needed
+          fit: BoxFit.cover, // Fit the image within the box
         ),
-        const SizedBox(height: 10),
-        const Text(
-          "Learn programming, design, and business",
-          style: TextStyle(color: Colors.white, fontSize: 16),
-          textAlign: TextAlign.center,
+        SizedBox(height: 20),
+        Text(
+          title, // Display the title
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
         ),
+        SizedBox(height: 10),
+        Text(
+          description, // Display the description
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 16,
+          ),
+        ),
+        SizedBox(height: 20),
       ],
     );
   }

@@ -1,21 +1,22 @@
-const String getStarted = 'Get Started';
-const String immersionKnowledge = 'Immersion in the world of knowledge';
-const String programming = 'Programming';
-const String design = 'Design';
-const String businessFinance = 'Business and Finance';
-const String continueLearning = 'Continue Learning';
-const String complete = 'Complete';
-const String lessons = 'Lessons';
-const String pythonForBeginners = 'Python for Beginners';
-const String html5 = 'HTML 5';
-const String cppBackend = 'C++ Backend';
-const String basicCSS = 'Basic CSS';
-const String newCourses = 'New Courses';
-const String courses = 'Courses';
-const String home = 'Home';
-const String favorites = 'Favorites';
-const String search = 'Search';
-const String settings = 'Settings';
-const String nextQuestion = 'Next Question';
-const String myapp = 'My App'
-
+class AppStrings {
+  static const String getStarted = "Get Started";
+  static const String immersionKnowledge = "Immersion in the World of Knowledge";
+  static const String description = "We chose a matte purple complementing the dark theme of the interface, creating a comfortable environment for extended learning sessions.";
+  static const String programming = "Programming";
+  static const String design = "Design";
+  static const String businessFinance = "Business and Finance";
+  static const String continueLearning = "Continue Learning";
+  static const String complete = "Complete";
+  static const String lessons = "Lessons";
+  static const String pythonForBeginners = "Python for Beginners";
+  static const String html5 = "HTML 5";
+  static const String cppBackend = "C++ Backend";
+  static const String basicCSS = "Basic CSS";
+  static const String newCourses = "New Courses";
+  static const String courses = "Courses";
+  static const String home = "Home";
+  static const String favorites = "Favorites";
+  static const String search = "Search";
+  static const String settings = "Settings";
+  static const String nextQuestion = "Next Question";
+}

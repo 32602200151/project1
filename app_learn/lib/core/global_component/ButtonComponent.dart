@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
 
-ElevatedButton(
-  style: ButtonStyle(
-    backgroundColor: WidgetStateProperty.all<Color>(Colors.purple.shade900),
-    shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-      RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12.0),
+class ButtonComponent extends StatelessWidget {
+  final String text;
+  final VoidCallback onPressed;
+
+  const ButtonComponent({required this.text, required this.onPressed, super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xFF8978F4), // Warna ungu gelap
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16), // Radius
+        ),
       ),
-    ),
-  ),
-  onPressed: () {},
-  child: Text('Get Started', style: TextStyle(color: Colors.white)),
-);
+      child: Text(
+        text,
+        style: const TextStyle(color: Colors.white),
+      ),
+    );
+  }
+}

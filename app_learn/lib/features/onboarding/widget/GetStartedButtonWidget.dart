@@ -3,29 +3,25 @@ import 'package:flutter/material.dart';
 class GetStartedButtonWidget extends StatelessWidget {
   final VoidCallback onPressed;
 
-  const GetStartedButtonWidget({super.key, required this.onPressed});
+  const GetStartedButtonWidget({Key? key, required this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.deepPurple,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-      ),
-      child: const Row(
+      child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-            "Get Started",
-            style: TextStyle(color: Colors.white, fontSize: 16),
-          ),
-          SizedBox(width: 10),
-          Icon(Icons.arrow_forward, color: Colors.white),
+          Text('Get started', style: TextStyle(color: Colors.white)), // White text color
+          SizedBox(width: 5), // Space between text and icon
+          Icon(Icons.arrow_forward, color: Colors.white), // Forward arrow icon
         ],
+      ),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.deepPurple, // Use backgroundColor instead of primary
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30), // Button radius
+        ),
       ),
     );
   }

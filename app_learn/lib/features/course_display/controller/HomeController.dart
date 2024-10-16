@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:app_learn/data/course/dummy/DummyCourses.dart';
-import 'package:app_learn/core/utils/route_utils.dart';
 
 class HomeController extends GetxController {
   // Variable untuk menyimpan data course
