@@ -1,30 +1,32 @@
 import 'package:flutter/material.dart';
-import '../../onboarding/widget/GetStartedButtonWidget.dart';
-import '../../onboarding/widget/WelcomeIllustrationWidget.dart';
-import '../../onboarding/controller/WelcomeController.dart';
-import '../../../core/constants/color.dart'; 
-import '../../../core/constants/string.dart'; // Make sure to import the strings.dart file
+import '../controller/WelcomeController.dart';
+import '../widget/WelcomeIllustrationWidget.dart';
+import '../widget/GetStartedButtonWidget.dart';
+import '../../../core/constants/colors.dart'; // Correct path for colors
+import '../../../core/constants/strings.dart'; // Correct path for strings
 
 class WelcomeScreen extends StatelessWidget {
+  final WelcomeController welcomeController = WelcomeController();
+
+  WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: AppColors.lightPurple, // Use the purple color
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            WelcomeIllustrationWidget(
-              title: AppStrings.immersionKnowledge, // Pass title
-              description: AppStrings.description, // Pass description
-              imageUrl: 'assets/images/Welcome.png', // Pass the image URL
-            ),
-            SizedBox(height: 20), // Add some space before the button
-            GetStartedButtonWidget(onPressed: () {
-              // Navigate to the home screen
-            }),
-          ],
-        ),
+      backgroundColor: AppColors.lightPurple, // Use the light purple from AppColors
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          WelcomeIllustrationWidget(
+            title: AppStrings.title, // Use string from AppStrings
+            description: AppStrings.description, // Use string from AppStrings
+            imageUrl: 'assets/images/welcomescreen.png', // Your local image asset
+          ),
+          const SizedBox(height: 20),
+          GetStartedButtonWidget(
+            onPressed: welcomeController.navigateToHome,
+          ),
+        ],
       ),
     );
   }

@@ -1,48 +1,39 @@
 import 'package:flutter/material.dart';
+import '../../../core/constants/color.dart'; // Import the strings file
+import '../../../core/constants/image.dart'; 
+import '../../../core/constants/string.dart'; 
 
 class WelcomeIllustrationWidget extends StatelessWidget {
   final String title;
   final String description;
-  final String imageUrl; // Added imageUrl parameter
+  final String imageUrl; 
 
   const WelcomeIllustrationWidget({
-    Key? key,
+    super.key,
     required this.title,
     required this.description,
-    required this.imageUrl, // Include imageUrl in constructor
-  }) : super(key: key);
+    required this.imageUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        // Display the illustration
-        Image.asset(
-          imageUrl,
-          height: 500, // Adjust the height as needed
-          width: 500, // Adjust the width as needed
-          fit: BoxFit.cover, // Fit the image within the box
-        ),
-        SizedBox(height: 20),
+        Image.asset(imageUrl), // Use local image
+        const SizedBox(height: 20),
         Text(
-          title, // Display the title
-          style: TextStyle(
-            color: Colors.white,
+          title,
+          style: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
+            color: Colors.white, // Set text color to white
           ),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Text(
-          description, // Display the description
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-          ),
+          description,
+          style: const TextStyle(color: Colors.white), // Set text color to white
         ),
-        SizedBox(height: 20),
       ],
     );
   }

@@ -10,7 +10,7 @@ import '../widgets/CourseCardWidgets.dart';
 class HomeScreen extends StatelessWidget {
   final List<CourseResponse> courses; // Pastikan ini menggunakan CourseResponse
 
-  const HomeScreen({Key? key, required this.courses}) : super(key: key);
+  const HomeScreen({super.key, required this.courses});
 
   @override
   Widget build(BuildContext context) {

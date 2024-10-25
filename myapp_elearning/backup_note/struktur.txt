@@ -1,0 +1,240 @@
+lib
+├── core
+│   ├── global_components
+│   │   ├── ButtonComponent.dart
+│   │   ├── AvatarComponent.dart
+│   │   └── NetworkImageLoader.dart
+│   ├── config
+│   │   └── main_app.dart
+│   ├── utils
+│   │   └── route_utils.dart
+│   └── constants
+│       ├── strings.dart
+│       ├── colors.dart
+│       └── images.dart
+└── data
+    ├── course
+    │   ├── model_responses
+    │   │   └── CourseResponse.dart
+    │   └── dummy
+    │       └── DummyCourses.dart
+    └── quizzes
+        ├── model_responses
+        │   └── QuizResponse.dart
+        └── dummy
+            └── DummyQuizzes.dart
+└── features
+    ├── course_display
+    │   ├── screen
+    │   │   └── HomeScreen.dart
+    │   ├── widgets
+    │   │   ├── CourseCardWidget.dart
+    │   │   ├── ContinueLearningWidget.dart
+    │   │   ├── AvatarWidget.dart
+    │   │   └── NavigationBarWidget.dart
+    │   └── controller
+    │       └── HomeController.dart
+    ├── quiz_interface
+    │   ├── screen
+    │   │   └── QuizScreen.dart
+    │   ├── widgets
+    │   │   ├── QuizCardWidget.dart
+    │   │   ├── AnswerOptionWidget.dart
+    │   │   ├── NextButtonWidget.dart
+    │   │   └── ProgressBarComponent.dart
+    │   └── controller
+    │       └── QuizController.dart
+    └── onboarding
+        ├── screen
+        │   └── WelcomeScreen.dart
+        ├── widgets
+        │   ├── WelcomeIllustrationWidget.dart
+        │   └── GetStartedButtonWidget.dart
+        └── controller
+            └── WelcomeController.dart
+
+
+
+core:
+  - global_component:
+    - ButtonComponent.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- Warna semua button ungu gelap
+  			- semua button radius
+
+    - AvatarComponent.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- avatar berbentuk bulat di sebelah kanan
+  			- Ukuran menyesuaikan layar
+  			
+    - NetworkImageLoader.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- buat Image.network untuk menampilkan gambar ilustrasi di welcome screen dan avatar pengguna.
+  			- optimalkan gambar agar tidak lambat saat dimuat
+  			
+  - config :
+    - main_app.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- Buat inisialisasi aplikasi
+  			- saat klik button get started dari welcomscreeen akan menuju ke home screen
+			- saat card course di klik akan menuju ke quiz
+			
+			
+  			
+  - utils :
+    - route_utils.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+			- Route WelcomeScreen, HomeScreen, Quizscreen
+			
+  - constants :
+    - string -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- get started
+			- title
+            - description
+			- programming
+			- design
+			- Business and Finance
+			- Continue Learning
+			- Complete
+			- Leassons
+			- python for beginners
+			- HTML 5
+			- C++ Beckend
+			- Basic CSS
+			- New Courses
+			- Courses
+			- Home
+			- Favorites
+			- Search
+			- settings
+			- Next Question
+    - color -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+			- #191919 
+			- #202020 
+			- #8978f4 
+			- #ffffff 
+    - images -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- welcomescreen.jpeg
+  			- desain.png
+			- programming.png
+			- businessandFinance.png
+  			- pyton.png
+			- html.png
+			- cplus.png
+			- css.png
+			- avatar.png
+
+
+data:
+    course:
+    - modelresponses:
+      - CourseResponse.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- judulkursus 
+  			- jumlahkursus
+  			
+    - dummy:
+      - DummyCourses.dart -> buatkan dummy data sesuai dari model diatas
+  			- judul kuis
+  			- nilai progrees selesai
+  			- jumlah kursus
+    quizez:
+    - modelresponses:
+      - QuizResponse.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- pertanyaan quiz
+  			- jawaban pertanyaan
+  			
+    - dummy:
+      - DummyQuiz.dart    -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- pertanyaa quiz
+  			- jawaban pertanyaan
+  			
+features:
+  course_display:
+    - screen:
+      - HomeScreen.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- latar belakang warna biru
+
+    - widgets:
+      - CourseCardWidget.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- tepi melengkung radius bisa disii
+  			- latar belakang warna ungu bisa diisi
+			- diatas latar belakang ada tulisan text bisa di isi
+			- dibawah text1 dan text2 bisa diisi manual
+
+      - ContinueLearningWidget.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- tepi melengkung radius bisa disii
+  			- latar belakang warna ungu bisa diisi
+			- diatas latar belakang ada tulisan text bisa di isi
+			- sebelah kiri ada iconleariningcourse bisa diisi manual
+			- disamping icon ada text1 dan text2 bisa di isi manual
+			- disampaing text1 ada icon text dimana :
+				- ada text = nilai angka bisa berubah bisa diisi manu kiri
+				- text lesson
+			- dibawahnya ada tulisan textprogreescomplete
+			- dibawah text ada progress bar indikator kemajuan bisa diisi manual
+  			- dan seterusnya
+      - AvatarWidget.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- buat circle avatar di sudut kanan
+      - NavigationBarWidget.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- navbar tampil screen paling bawah
+			- label dan icon home
+			- label dan icon Courses
+			- label dan icon Favorites
+			- label dan icon Search
+			- label dan icon Settings
+    - controller:
+      - HomeController.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- buat sebuah controler untuk memuat data dummy
+			- iconlessoncourse diklik menuju QuizScreen
+			- icon home berwarna putih jika dalam layar homescreen
+
+
+ feature
+  quiz_interface:
+    - screen:
+      - QuizScreen.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- buat tampilan layar pertanyaan
+			- buat tampilan opsi jawaban
+			- buat tampilan progrees bar
+  			- buat tampilan "Next Question" dengan text diisi secara manual
+    - widgets:
+      - QuizCardWidget.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- tepi radius bisa di isi
+  			- latar berwarn ungu
+			- gambar circle pertanyaan 
+			- dibawah gambar tampil text pertanyaan bisa d iisi
+  			- dan seterusnya
+      - AnswerOptionWidget.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- 4 button jawaban disusun grid dua dua
+  			- warna button bisa di isi
+			- jawaban yang di pilih ditandai dengan border dengan warna bisa di isi
+      - NextButtonWidget.dart
+			- buat button dengan text Next Question
+			- warna button bisa di isi manual
+      - ProgressBarComponent.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- buat progrees di bagian atas misalnya, 32% atau 7/25 pertanyaan
+  			- warna text bisa di isi manual
+  			
+    - controller:
+      - QuizController.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- muat data pertanyaan dan jawaban dari model data dummy
+  			- buat fungsi untuk cek jawaban yang di pilih benar/salah
+  			- update progress bar
+			- update jumlah pertanyaan yang sudah di kerjakan/total seluruh pertanyaan
+ 		
+  onboarding:
+    - screen:
+      - WelcomeScreen.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- latar belakang warna ungu bisa di isi manual
+			- tampilkan ilustasi
+   			- tampilkan button get started
+    - widgets:
+      - WelcomeIllustrationWidget.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- gambar ilustrasi bisa di isi manual
+  			- text judul ilustasi bisa di isi manual
+  			- text deskripsi bisa di isi manual
+			- warna text putih
+      - GetStartedButtonWidget.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- button radius bisa diisi 
+  			- warna ungu gelap
+  			- text button berwana putih 
+			- samping text ada anak panah ke depan
+    - controller:
+      - WelcomeController.dart -> buatkan step deskripsi cara code sesuai digambar itu dimana :
+  			- saat button di klik arankan ke homescreen
+

@@ -1,6 +1,6 @@
 class AppStrings {
   static const String getStarted = "Get Started";
-  static const String immersionKnowledge = "Immersion in the World of Knowledge";
+  static const String title = "Immersion in the World of Knowledge"; // Make sure this is included
   static const String description = "We chose a matte purple complementing the dark theme of the interface, creating a comfortable environment for extended learning sessions.";
   static const String programming = "Programming";
   static const String design = "Design";
